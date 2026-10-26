@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>UnoSoft — Technology That Flows Forward</title>
+    <meta name="description"
+        content="UnoSoft is a technology company delivering software, AI, cloud, automation, cybersecurity and digital transformation solutions.">
+    <meta property="og:title" content="UnoSoft — Technology That Flows Forward">
+    <meta property="og:description"
+        content="Software, AI, cloud, automation, cybersecurity and digital transformation.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.unosoft.in/">
+    <meta property="og:url" content="https://www.unosoft.in/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2304070f'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%2322d3ee' font-family='monospace'%3E01%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #04070f;
+            --bl: #2f7bff;
+            --cy: #22d3ee;
+            --tx: #e8f0ff;
+            --mu: #9db0d3;
+            --vi: #7c6cff;
+            --gl: rgba(9, 16, 34, .62);
+            --bd: rgba(80, 140, 255, .24);
+            --red: #ff5d6c;
+            --f: 'Sora', system-ui, sans-serif;
+            --m: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+            color-scheme: dark
+        }
+
+        @media (prefers-color-scheme:dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #04070f
+            }
+        }
+
+        :root[data-theme="dark"] {
+            --bg: #04070f
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 70px)
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--tx);
+            font: 300 1rem/1.65 var(--f);
+            overflow-x: hidden
+        }
+
+        #bg {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background: radial-gradient(ellipse at 50% 100%, #0a1a3c, var(--bg) 70%)
+        }
+
+        #sl {
+            position: fixed;
+            inset: 0;
+            z-index: 60;
+            pointer-events: none;
+            opacity: 0;
+            background: repeating-linear-gradient(0deg, rgba(34, 211, 238, .12) 0 1px, transparent 1px 4px)
+        }
+
+        .gl #sl {
+            opacity: 1
+        }
+
+        main,
+        footer {
+            position: relative;
+            z-index: 1
+        }
+
+        a {
+            color: inherit
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--cy);
+            outline-offset: 3px;
+            border-radius: 4px
+        }
+
+        .sr {
+            position: absolute;
+            left: -999px
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+            letter-spacing: -.02em;
+            line-height: 1.1;
+            margin: 0 0 .6em
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 8vw, 6.2rem);
+            overflow-wrap: anywhere
+        }
+
+        h2 {
+            font-size: clamp(1.9rem, 4.6vw, 3.4rem)
+        }
+
+        h3 {
+            font-size: 1.2rem
+        }
+
+        p {
+            margin: 0 0 1em;
+            color: var(--mu);
+            max-width: 62ch
+        }
+
+        section {
+            padding: clamp(80px, 12vw, 150px) clamp(18px, 5vw, 72px);
+            max-width: 1280px;
+            margin: auto
+        }
+
+        .wrap {
+            position: relative
+        }
+
+        .cy {
+            color: var(--cy)
+        }
+
+        .mono {
+            font-family: var(--m)
+        }
+
+        .lab {
+            font: 400 .8rem var(--m);
+            color: var(--cy);
+            margin-bottom: 14px;
+            display: block
+        }
+
+        .glass {
+            background: var(--gl);
+            border: 1px solid var(--bd);
+            border-radius: 14px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px)
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 26px;
+            border-radius: 999px;
+            border: 1px solid var(--bl);
+            background: linear-gradient(135deg, var(--bl), #1448c9);
+            color: #fff;
+            text-decoration: none;
+            font: 500 .95rem var(--f);
+            cursor: pointer;
+            transition: box-shadow .3s, transform .2s;
+            will-change: transform
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 28px rgba(47, 123, 255, .7)
+        }
+
+        .btn.o {
+            background: rgba(9, 16, 34, .5);
+            border-color: var(--bd)
+        }
+
+        .btn.o:hover {
+            border-color: var(--cy)
+        }
+
+        /* nav */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: calc(env(safe-area-inset-top, 0px) + 14px) clamp(18px, 4vw, 48px) 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background .4s, border-color .4s;
+            border-bottom: 1px solid transparent
+        }
+
+        nav::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: rgba(4, 7, 15, .78);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            opacity: 0;
+            transition: opacity .4s
+        }
+
+        nav.s::before {
+            opacity: 1
+        }
+
+        nav.s {
+            border-color: var(--bd)
+        }
+
+        .logo {
+            font: 700 1.75rem var(--f);
+            text-decoration: none;
+            letter-spacing: -.02em
+        }
+
+        .logo b {
+            color: var(--cy)
+        }
+
+        #menu {
+            display: flex;
+            gap: 26px;
+            align-items: center
+        }
+
+        #menu a {
+            text-decoration: none;
+            font-size: .88rem;
+            color: var(--mu);
+            transition: color .2s
+        }
+
+        #menu a:hover {
+            color: #fff
+        }
+
+        #menu a.btn {
+            color: #fff;
+            padding: 10px 20px
+        }
+
+        #hb {
+            display: none;
+            width: 44px;
+            height: 44px;
+            background: none;
+            border: 1px solid var(--bd);
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative
+        }
+
+        #hb i {
+            position: absolute;
+            left: 11px;
+            right: 11px;
+            height: 2px;
+            background: #fff;
+            transition: transform .3s, opacity .3s
+        }
+
+        #hb i:nth-child(1) {
+            top: 15px
+        }
+
+        #hb i:nth-child(2) {
+            top: 21px
+        }
+
+        #hb i:nth-child(3) {
+            top: 27px
+        }
+
+        #hb[aria-expanded=true] i:nth-child(1) {
+            transform: translateY(6px) rotate(45deg)
+        }
+
+        #hb[aria-expanded=true] i:nth-child(2) {
+            opacity: 0
+        }
+
+        #hb[aria-expanded=true] i:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg)
+        }
+
+        @media(max-width:980px) {
+            #hb {
+                display: block
+            }
+
+            #menu {
+                position: fixed;
+                inset: 0;
+                flex-direction: column;
+                justify-content: center;
+                gap: 22px;
+                background: rgba(4, 7, 15, .94);
+                backdrop-filter: blur(18px);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity .35s
+            }
+
+            #menu.o {
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            #menu a {
+                font-size: 1.4rem
+            }
+
+            #hb {
+                z-index: 2
+            }
+
+            .btn {
+                padding: 13px 22px
+            }
+        }
+
+        @media(max-width:480px) {
+            section {
+                padding-inline: 16px
+            }
+
+            .pn {
+                flex-basis: 84vw
+            }
+
+            #orb {
+                height: 380px
+            }
+        }
+
+        @media(min-width:1700px) {
+            html {
+                font-size: 18px
+            }
+        }
+
+        /* pre */
+        #pre {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: var(--bg);
+            display: grid;
+            place-items: center;
+            text-align: center;
+            transition: opacity .7s, visibility .7s
+        }
+
+        #pre.d {
+            opacity: 0;
+            visibility: hidden
+        }
+
+        #pm {
+            font: 400 .9rem var(--m);
+            color: var(--cy);
+            min-height: 1.5em
+        }
+
+        #pb {
+            font-size: clamp(2.2rem, 8vw, 4rem);
+            font-weight: 700;
+            opacity: 0;
+            transition: opacity .6s
+        }
+
+        #pb.v {
+            opacity: 1
+        }
+
+        .cur {
+            display: inline-block;
+            width: .55em;
+            height: 1em;
+            background: var(--cy);
+            vertical-align: -.12em;
+            animation: bl 1s steps(1) infinite;
+            margin-left: 3px
+        }
+
+        @keyframes bl {
+            50% {
+                opacity: 0
+            }
+        }
+
+        /* hero */
+        #home {
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            max-width: none;
+            padding-top: 130px
+        }
+
+        #home .in {
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 2
+        }
+
+        #home h1 {
+            text-shadow: 0 0 60px rgba(4, 7, 15, .9)
+        }
+
+        #home p.lead {
+            font-size: clamp(1.05rem, 2vw, 1.4rem);
+            color: var(--tx);
+            max-width: 34ch
+        }
+
+        .cta {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 28px
+        }
+
+        .term {
+            position: absolute;
+            z-index: 1;
+            font: 400 .72rem/1.55 var(--m);
+            padding: 12px 14px;
+            color: #9cc5ff;
+            white-space: pre;
+            overflow: hidden;
+            will-change: transform;
+            transition: transform .2s linear
+        }
+
+        .term b {
+            color: var(--cy);
+            font-weight: 500
+        }
+
+        .term em {
+            color: #6ee7a8;
+            font-style: normal
+        }
+
+        .term::before {
+            content: "";
+            display: block;
+            height: 6px;
+            margin: -4px 0 8px;
+            background: radial-gradient(circle, #2f7bff 2px, transparent 2.5px) 0 0/12px 6px
+        }
+
+        .gl .term,
+        .gl h1 {
+            animation: gx .22s steps(2)
+        }
+
+        @keyframes gx {
+            0% {
+                transform: translate(3px, -1px);
+                filter: hue-rotate(40deg)
+            }
+
+            50% {
+                transform: translate(-3px, 1px);
+                clip-path: inset(30% 0 40% 0)
+            }
+
+            100% {
+                transform: none
+            }
+        }
+
+        #sc {
+            position: absolute;
+            bottom: calc(env(safe-area-inset-bottom, 0px) + 22px);
+            left: 50%;
+            transform: translateX(-50%);
+            font: 400 .72rem var(--m);
+            color: var(--mu);
+            text-decoration: none;
+            letter-spacing: .14em;
+            z-index: 2
+        }
+
+        @media(max-height:560px) {
+            #sc {
+                display: none
+            }
+
+            #home {
+                padding-top: 100px
+            }
+        }
+
+        @media(max-width:900px) {
+            .term.h {
+                display: none
+            }
+
+            .term {
+                opacity: .55;
+                font-size: .62rem
+            }
+        }
+
+        /* stats */
+        #stats {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            padding-block: 40px
+        }
+
+        .st {
+            padding: 24px 18px;
+            text-align: center
+        }
+
+        .st strong {
+            display: block;
+            font: 700 clamp(2rem, 4vw, 3rem)/1 var(--f);
+            color: #fff
+        }
+
+        .st span {
+            color: var(--mu);
+            font-size: .85rem
+        }
+
+        @media(max-width:800px) {
+            #stats {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .st:last-child {
+                grid-column: 1/-1
+            }
+        }
+
+        /* about */
+        .two {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: clamp(30px, 5vw, 70px);
+            align-items: center
+        }
+
+        @media(max-width:860px) {
+            .two {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .scene {
+            perspective: 900px;
+            height: 320px;
+            display: grid;
+            place-items: center
+        }
+
+        .cube {
+            width: 110px;
+            height: 110px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rt 16s linear infinite
+        }
+
+        .cube i {
+            position: absolute;
+            inset: 0;
+            border: 1px solid var(--cy);
+            background: rgba(34, 211, 238, .07);
+            display: grid;
+            place-items: center;
+            font: 500 1.6rem var(--m);
+            color: var(--cy);
+            box-shadow: inset 0 0 24px rgba(47, 123, 255, .35)
+        }
+
+        .cube i:nth-child(1) {
+            transform: translateZ(55px)
+        }
+
+        .cube i:nth-child(2) {
+            transform: rotateY(90deg) translateZ(55px)
+        }
+
+        .cube i:nth-child(3) {
+            transform: rotateY(180deg) translateZ(55px)
+        }
+
+        .cube i:nth-child(4) {
+            transform: rotateY(-90deg) translateZ(55px)
+        }
+
+        .cube i:nth-child(5) {
+            transform: rotateX(90deg) translateZ(55px)
+        }
+
+        .cube i:nth-child(6) {
+            transform: rotateX(-90deg) translateZ(55px)
+        }
+
+        .cube.big {
+            width: 160px;
+            height: 160px
+        }
+
+        .cube.big i {
+            transform-origin: center
+        }
+
+        @keyframes rt {
+            to {
+                transform: rotateX(360deg) rotateY(360deg)
+            }
+        }
+
+        .orb {
+            position: absolute;
+            border: 1px solid var(--bd);
+            border-radius: 50%;
+            inset: 0;
+            margin: auto;
+            animation: rt 22s linear infinite reverse
+        }
+
+        /* approach */
+        #ap {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            position: relative;
+            margin-top: 50px
+        }
+
+        #ap::before {
+            content: "";
+            position: absolute;
+            top: 19px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--bl), var(--cy));
+            transform: scaleX(var(--p, 0));
+            transform-origin: left
+        }
+
+        .ap {
+            text-align: center;
+            position: relative;
+            opacity: .25;
+            transition: opacity .6s
+        }
+
+        .ap.in {
+            opacity: 1
+        }
+
+        .ap i {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 2px solid var(--cy);
+            line-height: 36px;
+            font: 500 .85rem var(--m);
+            font-style: normal;
+            color: var(--cy)
+        }
+
+        @media(max-width:700px) {
+            #ap {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                text-align: left
+            }
+
+            #ap::before {
+                display: none
+            }
+
+            .ap {
+                text-align: left;
+                display: flex;
+                gap: 14px;
+                align-items: center
+            }
+
+            .ap i {
+                margin: 0
+            }
+        }
+
+        /* cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+            gap: 18px;
+            margin-top: 40px
+        }
+
+        .card {
+            padding: 26px;
+            transform-style: preserve-3d;
+            transition: transform .15s, border-color .3s, box-shadow .3s;
+            will-change: transform
+        }
+
+        .card:hover {
+            border-color: var(--cy);
+            box-shadow: 0 0 30px rgba(47, 123, 255, .3)
+        }
+
+        .card p {
+            font-size: .92rem
+        }
+
+        .ico {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            background: linear-gradient(135deg, rgba(47, 123, 255, .5), rgba(34, 211, 238, .15));
+            border: 1px solid var(--bd);
+            transform: translateZ(36px);
+            box-shadow: 0 14px 24px -10px rgba(47, 123, 255, .7)
+        }
+
+        .more {
+            color: var(--cy);
+            font: 400 .85rem var(--m);
+            text-decoration: none
+        }
+
+        /* ai */
+        #ai canvas {
+            width: 100%;
+            height: clamp(260px, 40vw, 420px);
+            display: block;
+            margin: 30px 0
+        }
+
+        .three {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        @media(max-width:760px) {
+            .three {
+                grid-template-columns: 1fr
+            }
+        }
+
+        /* solutions */
+        #solutions {
+            height: 380vh;
+            max-width: none;
+            padding: 0
+        }
+
+        #solutions .stk {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            height: 100svh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 60px
+        }
+
+        #solutions h2 {
+            padding: 0 clamp(18px, 5vw, 72px)
+        }
+
+        #tr {
+            display: flex;
+            gap: 22px;
+            padding: 0 clamp(18px, 5vw, 72px);
+            will-change: transform
+        }
+
+        .pn {
+            flex: 0 0 min(78vw, 440px);
+            height: min(48vh, 340px);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden
+        }
+
+        .pn b {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font: 700 5rem var(--f);
+            color: rgba(47, 123, 255, .2)
+        }
+
+        /* stack */
+        #orb {
+            position: relative;
+            height: 440px;
+            margin-top: 20px
+        }
+
+        #core {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            text-align: center;
+            font: 500 .8rem var(--m);
+            color: var(--cy)
+        }
+
+        .tg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            padding: 7px 14px;
+            font: 500 .8rem var(--m);
+            border-radius: 999px;
+            white-space: nowrap
+        }
+
+        /* projects */
+        .viz {
+            height: 170px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--bd)
+        }
+
+        .viz::after {
+            content: "DEMONSTRATION PROJECT";
+            position: absolute;
+            left: 12px;
+            bottom: 10px;
+            font: 400 .65rem var(--m);
+            color: #fff;
+            background: rgba(4, 7, 15, .7);
+            padding: 3px 8px;
+            border-radius: 4px
+        }
+
+        .tags span {
+            display: inline-block;
+            font: 400 .72rem var(--m);
+            color: var(--cy);
+            border: 1px solid var(--bd);
+            padding: 2px 9px;
+            border-radius: 999px;
+            margin: 0 6px 6px 0
+        }
+
+        /* leaders */
+        .ld {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+            padding: 30px
+        }
+
+        .av {
+            flex: 0 0 96px;
+            height: 96px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font: 700 1.8rem var(--f);
+            background: linear-gradient(135deg, var(--bl), var(--vi));
+            box-shadow: 0 0 30px rgba(47, 123, 255, .5);
+            overflow: hidden
+        }
+
+        .av img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        @media(max-width:520px) {
+            .ld {
+                flex-direction: column;
+                text-align: center
+            }
+        }
+
+        /* why */
+        .wy {
+            padding: 22px;
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .6s, transform .6s
+        }
+
+        .wy.in {
+            opacity: 1;
+            transform: none
+        }
+
+        .wy span {
+            font: 500 .8rem var(--m);
+            color: var(--cy)
+        }
+
+        /* globe */
+        #gl {
+            width: 100%;
+            max-width: 560px;
+            aspect-ratio: 1;
+            margin: auto;
+            display: block
+        }
+
+        .jr {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            font: 400 .85rem var(--m);
+            margin: 18px 0
+        }
+
+        .jr span {
+            padding: 6px 14px;
+            border: 1px solid var(--bd);
+            border-radius: 999px;
+            transition: all .4s
+        }
+
+        .jr span.a {
+            border-color: var(--cy);
+            color: #fff;
+            box-shadow: 0 0 18px rgba(34, 211, 238, .4)
+        }
+
+        /* culture */
+        .cu {
+            text-align: center;
+            padding: 30px
+        }
+
+        .cu .scene {
+            height: 200px
+        }
+
+        /* cta */
+        #cta {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center
+        }
+
+        #cta p {
+            margin-inline: auto
+        }
+
+        /* form */
+        form {
+            padding: clamp(20px, 4vw, 40px);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px
+        }
+
+        form .f {
+            display: flex;
+            flex-direction: column;
+            gap: 6px
+        }
+
+        form .w {
+            grid-column: 1/-1
+        }
+
+        label {
+            font: 400 .8rem var(--m);
+            color: var(--mu)
+        }
+
+        input,
+        select,
+        textarea {
+            background: rgba(4, 7, 15, .7);
+            border: 1px solid var(--bd);
+            color: #fff;
+            border-radius: 10px;
+            padding: 13px 14px;
+            font: 300 1rem var(--f);
+            width: 100%
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid var(--cy);
+            border-color: transparent
+        }
+
+        @media(max-width:600px) {
+            form {
+                grid-template-columns: 1fr
+            }
+        }
+
+        #fs {
+            color: var(--cy);
+            font: 400 .85rem var(--m);
+            min-height: 1.4em
+        }
+
+        .ct {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 24px 0;
+            font: 400 .9rem var(--m)
+        }
+
+        footer {
+            border-top: 1px solid var(--bd);
+            padding: 50px clamp(18px, 5vw, 72px) 40px;
+            background: rgba(4, 7, 15, .82);
+            backdrop-filter: blur(10px)
+        }
+
+        footer .r {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            justify-content: space-between;
+            max-width: 1280px;
+            margin: auto
+        }
+
+        footer ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 20px
+        }
+
+        footer a {
+            color: var(--mu);
+            text-decoration: none;
+            font-size: .88rem
+        }
+
+        footer a:hover {
+            color: #fff
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            .cube,
+            .orb,
+            .cur {
+                animation: none
+            }
+
+            .wy {
+                opacity: 1;
+                transform: none
+            }
+
+            .ap {
+                opacity: 1
+            }
+        }
+    </style>
+    <noscript>
+        <style>
+            #pre {
+                display: none
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div id="pre" role="status" aria-live="polite">
+        <div>
+            <div id="pm"></div>
+            <div id="pb">Uno<span class="cy">Soft</span>
+                <div style="font:300 1rem var(--f);color:var(--mu);margin-top:8px">Technology That Flows Forward.</div>
+            </div>
+        </div>
+    </div>
+    <canvas id="bg" aria-hidden="true"></canvas>
+    <div id="sl" aria-hidden="true"></div>
+    <a class="sr" href="#about">Skip to content</a>
+    <nav id="nav" aria-label="Primary">
+        <a class="logo" href="#home">Uno<b>Soft</b></a>
+        <button id="hb" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+        <div id="menu"></div>
+    </nav>
+    <main>
+        <section id="home" aria-label="Introduction">
+            <div class="in">
+                <h1>Technology That<br>Flows Forward.</h1>
+                <p class="lead">Building intelligent digital solutions for a connected world.</p>
+                <div class="cta"><a class="btn mag" href="#services">Explore Our Solutions</a><a class="btn o mag"
+                        href="#contact">Start a Conversation</a></div>
+            </div>
+            <a id="sc" href="#stats">SCROLL TO EXPLORE ↓</a>
+        </section>
+        <section id="stats" aria-label="Key metrics (placeholder values)"></section>
+        <section id="about">
+            <div class="two">
+                <div>
+                    <span class="lab">About UnoSoft</span>
+                    <h2>We Build Technology With Purpose.</h2>
+                    <p>UnoSoft is a modern technology company headquartered in Bengaluru, India, focused on creating
+                        intelligent, scalable and human-centered digital solutions. We combine software engineering,
+                        artificial intelligence, cloud technologies and thoughtful design to solve complex business
+                        challenges.</p>
+                    <p><strong style="color:#fff">Vision.</strong> To build intelligent technology that simplifies
+                        businesses, connects people and creates measurable digital growth.</p>
+                    <p><strong style="color:#fff">Mission.</strong> To deliver innovative, scalable and secure
+                        technology solutions that help organizations operate smarter and grow faster.</p>
+                </div>
+                <div class="scene" aria-hidden="true">
+                    <div class="orb" style="width:300px;height:300px"></div>
+                    <div class="orb" style="width:210px;height:210px;animation-duration:14s"></div>
+                    <div class="cube big" id="c0"></div>
+                </div>
+            </div>
+            <h3 style="margin-top:80px">How we work</h3>
+            <div id="ap"></div>
+        </section>
+        <section id="services"><span class="lab">Services</span>
+            <h2>Technology Built Around Your Ambition.</h2>
+            <div class="grid" id="sv"></div>
+        </section>
+        <section id="ai"><span class="lab">Artificial intelligence</span>
+            <h2>Intelligence, Engineered.</h2>
+            <p>From intelligent automation to predictive insights, technology can transform information into meaningful
+                decisions.</p>
+            <canvas id="nn" role="img" aria-label="Animation: binary digits becoming a neural network"></canvas>
+            <p class="mono" style="color:var(--cy);font-size:.85rem">Binary → Data → Neural Network → Intelligence</p>
+            <div class="three">
+                <div class="card glass">
+                    <h3>Predict</h3>
+                    <p>Turn data into actionable insights.</p>
+                </div>
+                <div class="card glass">
+                    <h3>Automate</h3>
+                    <p>Reduce repetitive work through intelligent systems.</p>
+                </div>
+                <div class="card glass">
+                    <h3>Optimize</h3>
+                    <p>Continuously improve digital processes.</p>
+                </div>
+            </div>
+        </section>
+        <div id="solutions">
+            <div class="stk">
+                <h2>From Idea to Digital Reality.</h2>
+                <div id="tr"></div>
+            </div>
+        </div>
+        <section id="stack"><span class="lab">Technology stack</span>
+            <h2>An Ecosystem Around Your Product.</h2>
+            <div id="orb">
+                <div id="core">
+                    <div class="scene" style="height:140px" aria-hidden="true">
+                        <div class="cube" style="width:70px;height:70px" id="c1"></div>
+                    </div>Technology Core
+                </div>
+            </div>
+        </section>
+        <section id="projects"><span class="lab">Projects</span>
+            <h2>Technology In Action.</h2>
+            <p>Four demonstration concepts showing how we approach real problems. These are illustrative, not client
+                work.</p>
+            <div class="grid" id="pj" style="grid-template-columns:repeat(auto-fill,minmax(min(290px,100%),1fr))"></div>
+        </section>
+        <section id="why"><span class="lab">Principles</span>
+            <h2>Why Businesses Choose UnoSoft</h2>
+            <div class="grid" id="wy"></div>
+        </section>
+        <section id="global">
+            <div class="two">
+                <div><span class="lab">Global vision</span>
+                    <h2>Built in Bengaluru. Designed for the World.</h2>
+                    <p>Bengaluru is our technology hub. From here we are building for India first, then for global
+                        markets: North America, Europe, the Middle East and Asia-Pacific. These are target markets, not
+                        announced offices.</p>
+                    <div class="jr" id="jr"><span>Bengaluru</span><span>India</span><span>Global Technology</span></div>
+                </div>
+                <canvas id="gl" role="img"
+                    aria-label="Globe with connection lines from Bengaluru to target regions"></canvas>
+            </div>
+        </section>
+        <section id="culture"><span class="lab">Culture</span>
+            <h2>People. Ideas. Technology.</h2>
+            <p>Great technology begins with curious people, bold ideas and a culture that encourages continuous
+                learning.</p>
+            <div class="three" id="cu" style="margin-top:30px"></div>
+        </section>
+        <section id="cta">
+            <h2 style="font-size:clamp(2.4rem,7vw,5.5rem)">Have an Idea?<br>Let's Build What's Next.</h2>
+            <p>Tell us what you're trying to solve. We'll help turn the challenge into a digital opportunity.</p><a
+                class="btn mag" href="#contact">Start a Conversation →</a>
+        </section>
+        <section id="contact">
+            <div class="two" style="align-items:start">
+                <div><span class="lab">Contact</span>
+                    <h2>Let's Start Something Meaningful.</h2>
+                    <div class="ct" id="ci" style="flex-direction:column;gap:10px"></div>
+                </div>
+                <form class="glass" id="fm" novalidate>
+                    <div class="f"><label for="n">Name</label><input id="n" name="name" required autocomplete="name">
+                    </div>
+                    <div class="f"><label for="co">Company</label><input id="co" name="company"
+                            autocomplete="organization"></div>
+                    <div class="f"><label for="e">Email</label><input id="e" name="email" type="email" required
+                            autocomplete="email"></div>
+                    <div class="f"><label for="p">Phone</label><input id="p" name="phone" type="tel" autocomplete="tel">
+                    </div>
+                    <div class="f"><label for="sr">Service Required</label><select id="sr" name="service"></select>
+                    </div>
+                    <div class="f"><label for="bu">Project Budget</label><select id="bu" name="budget">
+                            <option>Not sure yet</option>
+                            <option>Under ₹5 lakh</option>
+                            <option>₹5–25 lakh</option>
+                            <option>₹25 lakh+</option>
+                        </select></div>
+                    <div class="f w"><label for="m">Message</label><textarea id="m" name="message" rows="4"
+                            required></textarea></div>
+                    <div class="w"><button class="btn" type="submit">Send Message</button> <button class="btn o"
+                            type="button" id="wa">Send via WhatsApp</button> <span id="fs" role="status"></span></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="r">
+            <div><a class="logo" href="#home">Uno<b>Soft</b></a>
+                <p style="margin-top:8px">Technology That Flows Forward.</p>
+            </div>
+            <nav aria-label="Footer">
+                <ul id="fl"></ul>
+            </nav>
+            <ul id="so"></ul>
+        </div>
+        <div class="r" style="margin-top:28px"><small style="color:var(--mu)">© 2026 UnoSoft. All Rights
+                Reserved.</small>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        /* ===== CONFIG: edit content here ===== */
+        const CONFIG = {
+            name: 'UnoSoft', tagline: 'Technology That Flows Forward.', hq: 'Bengaluru, Karnataka, India',
+            email: 'hello@unosoft.in', web: 'www.unosoft.in', toEmail: 'taran.mohali71@gmail.com', whatsapp: '919896977772', formEndpoint: 'https://formsubmit.co/ajax/taran.mohali71@gmail.com',
+            nav: [['Home', '#home'], ['About', '#about'], ['Services', '#services'], ['Solutions', '#solutions'], ['Projects', '#projects'], ['Contact', '#contact']],
+            social: [['LinkedIn', '#'], ['Instagram', '#'], ['X', '#'], ['YouTube', '#']],
+            stats: [[50, '+', 'Digital Projects'], [20, '+', 'Technology Experts'], [10, '+', 'Technology Domains'], [98, '%', 'Client Satisfaction'], [24, '/7', 'Technology Support']],
+            approach: ['Discover', 'Design', 'Build', 'Transform', 'Scale'],
+            services: [['AI & Machine Learning', 'Models that predict, classify and adapt to your data.', '◈'], ['Custom Software Development', 'Products engineered around how your business works.', '⌘'], ['Web & Mobile Applications', 'Fast, accessible apps for every screen.', '▣'], ['Cloud Solutions', 'Resilient, cost-aware infrastructure that scales.', '☁'], ['Business Automation', 'Replace repetitive steps with reliable workflows.', '⟳'], ['Data Analytics', 'Dashboards and pipelines that turn data into decisions.', '▤'], ['Cybersecurity', 'Security designed in from the first line of code.', '⛨'], ['UI/UX Design', 'Clear, human-centered interfaces.', '✎'], ['IT Consulting', 'Practical technology roadmaps.', '☰'], ['Digital Transformation', 'Modernize systems, teams and processes.', '⇡']],
+            solutions: ['Digital Products', 'Enterprise Platforms', 'AI Systems', 'Cloud Infrastructure', 'Automation', 'Data Intelligence'],
+            tech: ['React', 'Next.js', 'Node.js', 'Python', 'Java', 'TypeScript', 'AWS', 'Azure', 'Docker', 'Kubernetes', 'PostgreSQL', 'MongoDB', 'TensorFlow'],
+            projects: [['AI Business Intelligence Platform', 'AI & Analytics', 'Unifies company data and surfaces predictions in plain language.', ['Python', 'TensorFlow', 'React']], ['Smart Enterprise Automation', 'Automation', 'Connects approvals, documents and reporting into one flow.', ['Node.js', 'Docker', 'PostgreSQL']], ['Cloud Transformation Platform', 'Cloud', 'Plans and tracks a staged move from legacy servers to the cloud.', ['AWS', 'Kubernetes', 'TypeScript']], ['Intelligent Customer Experience', 'AI & Design', 'A support experience that answers, routes and learns.', ['Next.js', 'Python', 'MongoDB']]],
+            leaders: [['Balwinder Kaur', 'Director', 'BK', 'Providing strategic direction and helping shape UnoSoft\'s long-term vision, culture and growth.', ''], ['Taranpreet Singh', 'Chief Executive Officer', 'TS', 'Leading UnoSoft\'s technology strategy, innovation and business growth with a focus on building scalable digital solutions.', '']],
+            why: ['Innovation First', 'Business-Focused Technology', 'Scalable Architecture', 'Security by Design', 'Human-Centered Design', 'Long-Term Partnership'],
+            culture: [['People', '◉'], ['Ideas', '✦'], ['Technology', '⌬']]
+        };
+        const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+        const RM = matchMedia('(prefers-reduced-motion: reduce)').matches, W0 = innerWidth, MOB = W0 < 700, TAB = W0 < 1100;
+        const cubeH = g => [0, 1, 2, 3, 4, 5].map(i => `<i>${i % 2 ? '1' : '0'}</i>`).join('');
+        /* ===== render ===== */
+        $('#menu').innerHTML = CONFIG.nav.map(n => `<a href="${n[1]}">${n[0]}</a>`).join('') + '<a class="btn mag" href="#contact">Let\'s Talk →</a>';
+        $('#stats').innerHTML = CONFIG.stats.map(s => `<div class="st glass"><strong><span data-n="${s[0]}">0</span>${s[1]}</strong><span>${s[2]}</span></div>`).join('');
+        $('#ap').innerHTML = CONFIG.approach.map((a, i) => `<div class="ap"><i>${i + 1}</i><span>${a}</span></div>`).join('');
+        $('#sv').innerHTML = CONFIG.services.map(s => `<article class="card glass tilt"><div class="ico" aria-hidden="true">${s[2]}</div><h3>${s[0]}</h3><p>${s[1]}</p><a class="more" href="#contact">Learn More</a></article>`).join('');
+        $('#tr').innerHTML = CONFIG.solutions.map((s, i) => `<article class="pn glass"><b aria-hidden="true">0${i + 1}</b><h3>${s}</h3><p style="margin:0">Built to move from concept to production.</p></article>`).join('');
+        const hues = [[220, '#1448c9', '#22d3ee'], [260, '#7c6cff', '#2f7bff'], [190, '#0e7490', '#22d3ee'], [225, '#2f7bff', '#7c6cff']];
+        $('#pj').innerHTML = CONFIG.projects.map((p, i) => `<article class="card glass"><div class="viz" style="background:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 2px,transparent 2px 22px),radial-gradient(circle at ${20 + i * 20}% 40%,${hues[i][2]},transparent 55%),linear-gradient(135deg,#050b1c,${hues[i][1]})"></div><span class="mono cy" style="font-size:.75rem">${p[1]}</span><h3>${p[0]}</h3><p>${p[2]}</p><div class="tags">${p[3].map(t => `<span>${t}</span>`).join('')}</div><a class="more" href="#contact">View Case Study</a></article>`).join('');
+        $('#wy').innerHTML = CONFIG.why.map((w, i) => `<div class="wy glass" style="transition-delay:${(i % 3) * .12}s"><span>0${i + 1}</span><h3>${w}</h3></div>`).join('');
+        $('#cu').innerHTML = CONFIG.culture.map(c => `<div class="cu glass"><div class="scene" aria-hidden="true"><div class="cube" style="width:80px;height:80px">${cubeH()}</div></div><h3>${c[0]}</h3></div>`).join('');
+        $('#c0').innerHTML = cubeH(); $('#c1').innerHTML = cubeH();
+        $('#sr').innerHTML = CONFIG.services.map(s => `<option>${s[0]}</option>`).join('');
+        $('#ci').innerHTML = `<span>✉ <a href="mailto:${CONFIG.email}">${CONFIG.email}</a></span><span>◎ ${CONFIG.web}</span><span>⌖ ${CONFIG.hq}</span>`;
+        $('#fl').innerHTML = CONFIG.nav.map(n => `<li><a href="${n[1]}">${n[0]}</a></li>`).join('');
+        $('#so').innerHTML = CONFIG.social.map(n => `<li><a href="${n[1]}" aria-label="${n[0]}">${n[0]}</a></li>`).join('');
+        $('#fm').insertAdjacentHTML('afterbegin', '<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">');
+        $('#fm').addEventListener('submit', async e => {
+            e.preventDefault(); const f = e.target, s = $('#fs'), bt = f.querySelector('button');
+            if (!f.checkValidity() || !/^\S+@\S+\.\S+$/.test(f.email.value)) {s.style.color = 'var(--red)'; s.textContent = 'Please fill in your name, a valid email and a message.'; f.reportValidity(); return }
+            const fd = new FormData(f); if (fd.get('_honey')) return;
+            const d = {};['name', 'company', 'email', 'phone', 'service', 'budget', 'message'].forEach(k => d[k] = (fd.get(k) || '').toString().trim());
+            d._subject = 'New enquiry from the UnoSoft website'; d._template = 'table';
+            s.style.color = 'var(--cy)'; s.textContent = 'Sending...'; bt.disabled = true;
+            try {
+                const r = await fetch(CONFIG.formEndpoint, {method: 'POST', headers: {'Content-Type': 'application/json', Accept: 'application/json'}, body: JSON.stringify(d)}); const j = await r.json();
+                if (r.ok && (j.success === true || j.success === 'true')) {s.textContent = 'Thank you! Your message has been sent. We will reply soon.'; f.reset()} else throw 0
+            }
+            catch (x) {
+                const b = Object.entries(d).filter(k => k[0][0] !== '_').map(k => k[0] + ': ' + k[1]).join('\n'), a = document.createElement('a');
+                a.href = 'mailto:' + CONFIG.toEmail + '?subject=' + encodeURIComponent(d._subject) + '&body=' + encodeURIComponent(b); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Click here to send it by email'; a.style.cssText = 'color:#fff;text-decoration:underline';
+                s.style.color = 'var(--red)'; s.textContent = 'We could not send it automatically. '; s.appendChild(a); s.appendChild(document.createTextNode(' or write to ' + CONFIG.toEmail + '.'))
+            }
+            bt.disabled = false;
+        });
+        $('#wa').addEventListener('click', () => {
+            const f = $('#fm'); if (!f.checkValidity()) {f.reportValidity(); return }
+            const fd = new FormData(f), L = [['Name', 'name'], ['Company', 'company'], ['Email', 'email'], ['Phone', 'phone'], ['Service', 'service'], ['Budget', 'budget'], ['Message', 'message']];
+            const t = 'New enquiry from the UnoSoft website\n' + L.map(k => k[0] + ': ' + (fd.get(k[1]) || '-')).join('\n');
+            window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(t), '_blank', 'noopener')
+        });
+        /* menu */
+        const hb = $('#hb'), mn = $('#menu');
+        hb.onclick = () => {const o = hb.getAttribute('aria-expanded') !== 'true'; hb.setAttribute('aria-expanded', o); mn.classList.toggle('o', o)};
+        mn.onclick = e => {if (e.target.tagName === 'A') {hb.setAttribute('aria-expanded', false); mn.classList.remove('o')} };
+        addEventListener('keydown', e => {if (e.key === 'Escape') {hb.setAttribute('aria-expanded', false); mn.classList.remove('o')} });
+        /* preloader */
+        const msgs = ['INITIALIZING...', 'LOADING DIGITAL ENVIRONMENT...', 'ESTABLISHING CONNECTION...', 'SYSTEM READY'], pm = $('#pm'); let mi = 0;
+        const step = RM ? 150 : 420;
+        (function nx() {if (mi < msgs.length) {pm.innerHTML = msgs[mi++] + '<span class="cur"></span>'; setTimeout(nx, step)} else {pm.textContent = ''; $('#pb').classList.add('v'); setTimeout(() => $('#pre').classList.add('d'), RM ? 300 : 800)} })();
+        /* reveal + counters */
+        const io = new IntersectionObserver(es => es.forEach(en => {
+            if (!en.isIntersecting) return; const t = en.target; t.classList.add('in');
+            if (t.dataset.n) {const to = +t.dataset.n, t0 = performance.now(); (function c(n) {const k = Math.min(1, (n - t0) / 1400); t.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(c)})(t0)}
+            io.unobserve(t)
+        }), {threshold: .35});
+        $$('.ap,.wy,[data-n]').forEach(e => io.observe(e));
+        /* tilt + magnetic */
+        if (!RM && matchMedia('(pointer:fine)').matches) {
+            $$('.tilt').forEach(c => {c.onpointermove = e => {const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; c.style.transform = `perspective(700px) rotateX(${-y * 12}deg) rotateY(${x * 14}deg)`}; c.onpointerleave = () => c.style.transform = ''});
+            $$('.mag').forEach(b => {b.onpointermove = e => {const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .2}px,${(e.clientY - r.top - r.height / 2) * .3}px)`}; b.onpointerleave = () => b.style.transform = ''})
+        }
+        /* glitch (rare) */
+        if (!RM) (function g() {setTimeout(() => {document.body.classList.add('gl'); setTimeout(() => document.body.classList.remove('gl'), 100 + Math.random() * 180); g()}, 7000 + Math.random() * 8000)})();
+        /* ===== WebGL binary wave ===== */
+        const cv = $('#bg'); let R = null, layers = [];
+        try {
+            R = new THREE.WebGLRenderer({canvas: cv, antialias: false, alpha: true, powerPreference: 'high-performance'});
+            R.setPixelRatio(Math.min(devicePixelRatio, MOB ? 1.25 : 1.75)); R.setClearColor(0, 0);
+        } catch (e) {R = null}
+        const H3 = typeof THREE !== 'undefined', cam = H3 ? new THREE.PerspectiveCamera(60, 1, .1, 120) : null, scene = H3 ? new THREE.Scene() : null; if (cam) cam.position.set(0, 5, 14);
+        const tc = document.createElement('canvas'); tc.width = 128; tc.height = 64; const tx = tc.getContext('2d');
+        tx.fillStyle = '#fff'; tx.font = '700 54px monospace'; tx.textAlign = 'center'; tx.textBaseline = 'middle'; tx.fillText('0', 32, 34); tx.fillText('1', 96, 34);
+        const tex = H3 ? new THREE.CanvasTexture(tc) : null;
+        const VS = `uniform float uT,uE,uPh,uConv,uSize,uScale,uSpeed,uAmp,uSpread,uAl;varying float vC,vA;attribute float aS;
+void main(){vec3 p=position;float Rg=64.;p.x=mod(p.x+uT*uSpeed+Rg*.5,Rg)-Rg*.5;p.x*=1.-uConv*.6;p.z=p.z*(1.-uConv*.3);p.y=(aS-.5)*uSpread;
+float y=sin(p.x*.17+uT*.6)*1.5*uAmp+sin(p.x*.07+p.z*.25-uT*.4)*2.2*uAmp+sin(p.z*.3+uT*.5)*.7;
+float tr=sin(p.x*.22-uPh+p.z*.12)*uE*3.6;float d=length(p.xz-vec2(0.,-3.));float rp=sin(d*.8-uPh*1.6)*exp(-d*.06)*uE*2.6;
+float cr=y+tr+rp;p.y+=cr-3.;p.z+=sin(p.x*.2+uPh)*uE*1.8;
+vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;gl_PointSize=max(2.,uSize*uScale/-mv.z*(1.+uE*.25));
+float k=fract(aS*7.13+floor(uT*(.4+fract(aS*3.7))+aS*20.)*.618);vC=step(.5,k);
+vA=uAl*(.4+.6*smoothstep(-3.,4.,cr))*smoothstep(70.,14.,-mv.z)*smoothstep(0.,2.,-mv.z);}`;
+        const FS = `uniform sampler2D uTex;uniform vec3 uCol;varying float vC,vA;void main(){vec2 uv=vec2((gl_PointCoord.x+vC)*.5,1.-gl_PointCoord.y);float a=texture2D(uTex,uv).a;if(a<.05)discard;gl_FragColor=vec4(uCol*(.8+a*.5),a*vA);}`;
+        const k = MOB ? .3 : TAB ? .6 : 1;
+        const LC = [{n: 2400, s: .9, z: [2, 11], a: .95, sp: 3.2, spr: 2.5, b: 1.15, px: 1.4}, {n: 5200, s: .55, z: [-12, 2], a: .6, sp: 1.8, spr: 5, b: .9, px: .7}, {n: 9000, s: .34, z: [-38, -12], a: .3, sp: .8, spr: 9, b: .7, px: .25}];
+        if (R) LC.forEach(c => {
+            const n = Math.floor(c.n * k), pos = new Float32Array(n * 3), s = new Float32Array(n);
+            for (let i = 0; i < n; i++) {pos[i * 3] = (Math.random() - .5) * 64; pos[i * 3 + 2] = c.z[0] + Math.random() * (c.z[1] - c.z[0]); s[i] = Math.random()}
+            const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(pos, 3)); g.setAttribute('aS', new THREE.BufferAttribute(s, 1));
+            const m = new THREE.ShaderMaterial({
+                vertexShader: VS, fragmentShader: FS, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+                uniforms: {uT: {value: 0}, uE: {value: 0}, uPh: {value: 0}, uConv: {value: 0}, uSize: {value: c.s}, uScale: {value: 600}, uSpeed: {value: c.sp}, uAmp: {value: 1}, uSpread: {value: c.spr}, uAl: {value: c.a}, uTex: {value: tex}, uCol: {value: new THREE.Color(.18, .48, 1)}}
+            });
+            const pts = new THREE.Points(g, m); pts.frustumCulled = false; pts.userData = c; scene.add(pts); layers.push(pts)
+        });
+        function size() {const w = innerWidth, h = innerHeight; if (R) {R.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix(); const sc = h * R.getPixelRatio() * .866; layers.forEach(l => l.material.uniforms.uScale.value = sc)} }
+        let rw = innerWidth, rt; addEventListener('resize', () => {clearTimeout(rt); rt = setTimeout(() => {if (innerWidth !== rw || !MOB) {rw = innerWidth; size()} }, 150)}); size();
+        const CS = [[.18, .48, 1], [.18, .48, 1], [.13, .83, .93], [.2, .5, 1], [.45, .45, 1], [.18, .48, 1]];
+        const lc = p => {const n = CS.length - 1, x = p * n, i = Math.min(n - 1, x | 0), f = x - i; return CS[i].map((c, j) => c + (CS[i + 1][j] - c) * f)};
+        const sm = (a, b, x) => {x = Math.min(1, Math.max(0, (x - a) / (b - a))); return x * x * (3 - 2 * x)};
+        /* ===== canvases: neural net + globe ===== */
+        const nn = $('#nn'), nx = nn.getContext('2d'), gl = $('#gl'), gx = gl.getContext('2d');
+        let vis = {nn: false, gl: false};
+        new IntersectionObserver(es => es.forEach(e => vis[e.target.id] = e.isIntersecting)).observe(nn);
+        new IntersectionObserver(es => es.forEach(e => vis[e.target.id] = e.isIntersecting)).observe(gl);
+        function fit(c, x) {const r = c.getBoundingClientRect(), d = Math.min(devicePixelRatio, 2); c.width = r.width * d; c.height = r.height * d; x.setTransform(d, 0, 0, d, 0, 0); return [r.width, r.height]}
+        let nS = fit(nn, nx), gS = fit(gl, gx); addEventListener('resize', () => {nS = fit(nn, nx); gS = fit(gl, gx)});
+        const NL = [4, 7, 7, 3], NR = []; for (let i = 0; i < 30; i++)NR.push(Math.random());
+        function drawNN(t) {
+            const [w, h] = nS; nx.clearRect(0, 0, w, h); const r = nn.getBoundingClientRect(), pr = Math.min(1, Math.max(0, 1 - (r.top + r.height * .4) / innerHeight * 1.15));
+            nx.font = '14px monospace'; nx.fillStyle = `rgba(80,160,255,${.7 * (1 - pr) + .1})`;
+            for (let c = 0; c < 14; c++)for (let j = 0; j < 10; j++) {nx.fillText(((Math.sin(c * 7.1 + j * 3.3 + Math.floor(t * 2 + c)) * 43758) % 1 > 0) ? '1' : '0', c * (w * .02) + 8, 18 + j * h / 10)}
+            const pts = []; NL.forEach((n, l) => {for (let i = 0; i < n; i++)pts.push([w * (.28 + l * .2), h * ((i + 1) / (n + 1)), l])});
+            nx.lineWidth = 1; pts.forEach((a, i) => pts.forEach((b, j) => {
+                if (b[2] === a[2] + 1) {
+                    nx.strokeStyle = `rgba(34,211,238,${.18 * pr})`; nx.beginPath(); nx.moveTo(a[0], a[1]); nx.lineTo(b[0], b[1]); nx.stroke();
+                    if ((i * 7 + j * 3) % 11 === 0) {const q = (t * .5 + i * .13) % 1; nx.fillStyle = `rgba(180,235,255,${pr})`; nx.fillRect(a[0] + (b[0] - a[0]) * q - 1.5, a[1] + (b[1] - a[1]) * q - 1.5, 3, 3)}
+                }
+            }));
+            pts.forEach((a, i) => {nx.beginPath(); nx.arc(a[0], a[1], 4 + 3 * pr + Math.sin(t * 2 + i) * 1, 0, 7); nx.fillStyle = `rgba(47,123,255,${.2 + .8 * pr})`; nx.shadowColor = '#22d3ee'; nx.shadowBlur = 12 * pr; nx.fill()}); nx.shadowBlur = 0
+        }
+        const D = Math.PI / 180, LL = (la, lo) => [Math.cos(la * D) * Math.sin(lo * D), Math.sin(la * D), Math.cos(la * D) * Math.cos(lo * D)];
+        const BLR = [12.97, 77.59], TG = [[40, -100, 'North America'], [50, 10, 'Europe'], [25, 45, 'Middle East'], [1, 115, 'Asia-Pacific']];
+        const GD = []; for (let la = -80; la <= 80; la += 7)for (let lo = -180; lo < 180; lo += 7 / Math.cos(la * D))GD.push(LL(la, lo));
+        function rot(v, yaw, pit) {let x = v[0] * Math.cos(yaw) - v[2] * Math.sin(yaw), z = v[0] * Math.sin(yaw) + v[2] * Math.cos(yaw), y = v[1]; const y2 = y * Math.cos(pit) - z * Math.sin(pit), z2 = y * Math.sin(pit) + z * Math.cos(pit); return [x, y2, z2]}
+        let jrI = -1;
+        function drawGL(t) {
+            const [w, h] = gS, cx = w / 2, cy = h / 2, r = w * .38; gx.clearRect(0, 0, w, h);
+            const yaw = -(BLR[1] * D) + (Math.sin(t * .25) * .7) + .4, pit = BLR[0] * D * .5;
+            const P = v => {const q = rot(v, yaw, pit); return [cx + q[0] * r, cy - q[1] * r, q[2]]};
+            const g = gx.createRadialGradient(cx, cy, r * .2, cx, cy, r * 1.15); g.addColorStop(0, 'rgba(20,70,200,.16)'); g.addColorStop(1, 'rgba(0,0,0,0)'); gx.fillStyle = g; gx.fillRect(0, 0, w, h);
+            GD.forEach(v => {const p = P(v); if (p[2] > 0) {gx.fillStyle = `rgba(70,150,255,${.15 + .5 * p[2]})`; gx.fillRect(p[0], p[1], 1.6, 1.6)} });
+            const b = LL(BLR[0], BLR[1]); TG.forEach((tg, i) => {
+                const e = LL(tg[0], tg[1]), om = Math.acos(Math.min(1, b[0] * e[0] + b[1] * e[1] + b[2] * e[2])), pts = [];
+                for (let s = 0; s <= 40; s++) {const u = s / 40, a = Math.sin((1 - u) * om) / Math.sin(om), c = Math.sin(u * om) / Math.sin(om), lift = 1 + Math.sin(u * Math.PI) * .22; pts.push(P([(a * b[0] + c * e[0]) * lift, (a * b[1] + c * e[1]) * lift, (a * b[2] + c * e[2]) * lift]))}
+                gx.strokeStyle = 'rgba(34,211,238,.55)'; gx.lineWidth = 1.2; gx.beginPath(); let on = false; pts.forEach(p => {if (p[2] > -.05) {on ? gx.lineTo(p[0], p[1]) : gx.moveTo(p[0], p[1]); on = true} else on = false}); gx.stroke();
+                const q = pts[Math.floor(((t * .3 + i * .25) % 1) * 40)]; if (q[2] > 0) {gx.fillStyle = '#fff'; gx.beginPath(); gx.arc(q[0], q[1], 2.5, 0, 7); gx.fill()}
+                const ep = pts[40]; if (ep[2] > 0) {gx.fillStyle = '#22d3ee'; gx.beginPath(); gx.arc(ep[0], ep[1], 3, 0, 7); gx.fill(); gx.fillStyle = '#9db0d3'; gx.font = '11px monospace'; gx.fillText(tg[2], ep[0] + 7, ep[1] + 3)}
+            });
+            const bp = P(b); if (bp[2] > 0) {gx.fillStyle = '#fff'; gx.shadowColor = '#2f7bff'; gx.shadowBlur = 18; gx.beginPath(); gx.arc(bp[0], bp[1], 5 + Math.sin(t * 3) * 1.5, 0, 7); gx.fill(); gx.shadowBlur = 0; gx.fillStyle = '#fff'; gx.font = '12px monospace'; gx.fillText('Bengaluru', bp[0] + 10, bp[1] - 8)}
+            const j = Math.floor(t / 1.6) % 3; if (j !== jrI) {jrI = j; $$('#jr span').forEach((s, i) => s.classList.toggle('a', i === j))}
+        }
+        /* ===== stack orbit + solutions ===== */
+        const orbEl = $('#orb'), tags = CONFIG.tech.map(t => {const e = document.createElement('span'); e.className = 'tg glass'; e.textContent = t; orbEl.appendChild(e); return e});
+        const trk = $('#tr'), sol = $('#solutions'), apEl = $('#ap'), terms = $$('.term');
+        let mx = 0, my = 0, tmx = 0, tmy = 0;
+        addEventListener('pointermove', e => {tmx = e.clientX / innerWidth - .5; tmy = e.clientY / innerHeight - .5}, {passive: true});
+        let t = 0, ph = 0, E = 0, last = performance.now(), ly = scrollY, smooth = 0;
+        function frame(now) {
+            requestAnimationFrame(frame); const dt = Math.min(.05, (now - last) / 1000); last = now; t += dt;
+            const sy = scrollY, max = Math.max(1, document.documentElement.scrollHeight - innerHeight), p = Math.min(1, sy / max);
+            const v = Math.abs(sy - ly) / Math.max(dt, .001) / 60; ly = sy;
+            let tg = Math.min(1.3, v / 55); if (RM) tg *= .15; E += (tg - E) * (tg > E ? .1 : .03); ph += dt * (1.4 + E * 7) * (RM ? .2 : 1);
+            mx += (tmx - mx) * .05; my += (tmy - my) * .05;
+            $('#nav').classList.toggle('s', sy > 40);
+            if (R) {
+                const col = lc(p), conv = sm(.8, .92, p) * (1 - sm(.94, 1, p) * .55);
+                layers.forEach(l => {
+                    const u = l.material.uniforms, c = l.userData; u.uT.value = t * (RM ? .25 : 1); u.uE.value = E; u.uPh.value = ph; u.uConv.value = conv;
+                    u.uAmp.value = (.85 + E * .8 + (p > .35 && p < .5 ? .3 : 0)) * (MOB ? .8 : 1); u.uCol.value.setRGB(col[0] * c.b, col[1] * c.b, col[2] * c.b); l.position.x = mx * c.px * 2;
+                });
+                cam.position.set(mx * 2.2, 5 - my * 1.2 - p * 1.5, 14 - E * 1.2); cam.lookAt(0, 0, -5 + E * 2); R.render(scene, cam)
+            }
+            /* terminals follow wave */
+            if (!RM) terms.forEach((el, i) => {const w = Math.sin(t * .6 + i * 1.7) * 7 + E * Math.sin(ph + i) * 18 - sy * (.05 + i * .02); el.style.transform = `translateY(${w}px) perspective(600px) rotateY(${mx * -10}deg) rotateX(${my * 8}deg)`});
+            if (vis.nn) drawNN(t); if (vis.gl) drawGL(t);
+            /* orbit */
+            const ow = orbEl.clientWidth, oh = orbEl.clientHeight;
+            tags.forEach((e, i) => {const a = t * .25 + i / tags.length * 6.283, rx = Math.min(ow * .42, 420), ry = oh * .36, s = .75 + .25 * Math.sin(a + 1.57); e.style.transform = `translate(calc(-50% + ${Math.cos(a) * rx}px),calc(-50% + ${Math.sin(a) * ry * .8}px)) scale(${s})`; e.style.opacity = .45 + .55 * s; e.style.zIndex = Math.round(s * 10)});
+            /* approach line + horizontal solutions */
+            const ar = apEl.getBoundingClientRect(); apEl.style.setProperty('--p', Math.min(1, Math.max(0, (innerHeight * .8 - ar.top) / (ar.height + innerHeight * .3))).toFixed(3));
+            const sr = sol.getBoundingClientRect(), sp = Math.min(1, Math.max(0, -sr.top / (sr.height - innerHeight)));
+            trk.style.transform = `translateX(${-sp * Math.max(0, trk.scrollWidth - innerWidth)}px)`;
+        }
+        requestAnimationFrame(frame);
+    </script>
+</body>
+
+</html>
